@@ -23,27 +23,30 @@
 
 	<div id="link-container">
 		<div class="spacer"></div>
-		<a href="/about" id="about">
-			About
-		</a>
-		<a href="/projects" id="projects">
-			Projects
-		</a>
-		<a href="/contact" id="contact">
-			Contact
-		</a>
+		{#if path == '/about'}
+			<a href="/about" id="about" class="underline">About</a>
+		{:else}
+			<a href="/about" id="about">About</a>
+		{/if}
+
+		{#if path == '/projects'}
+			<a href="/projects" id="projects" class="underline">Projects</a>
+		{:else}
+			<a href="/projects" id="projects">Projects</a>
+		{/if}
+
+		{#if path == '/contact'}
+			<a href="/contact" id="contact" class="underline">Contact</a>
+		{:else}
+			<a href="/contact" id="contact">Contact</a>
+		{/if}
 		<div class="spacer"></div>
 	</div>
 </main>
 
 <style>
-	:global(body) {
-		margin: 0;
-		padding: 0;
-	}
-
 	main {
-		color: white;
+		color: #cad3f5;
 		text-align: center;
 		height: 20vh;
 	}
@@ -58,6 +61,12 @@
 		justify-content: space-between;
 	}
 
+	.underline {
+		text-decoration: underline;
+		text-decoration-thickness: 4px;
+		text-underline-position: under;
+	}
+
 	.spacer {
 		width: 35vw;
 	}
@@ -65,24 +74,24 @@
 	a {
 		display: flex;
 		color: white;
-		text-decoration: none;
 		font-size: 20px;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: 10vh;
+		text-decoration: none;
 	}
 
 	#about {
-		color: cyan;
+		color: #f5a97f;
 	}
 
 	#projects {
-		color: orange;
+		color: #7dc4e4;
 	}
 
 	#contact {
-		color: lightgreen; 
+		color: #a6da95; 
 	}
 
 </style>

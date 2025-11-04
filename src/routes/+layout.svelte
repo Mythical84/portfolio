@@ -12,7 +12,9 @@
 
 <style>
 	:global(body) {
-		background-color: #454545;
+		background-color: #24273a;
+		margin: 0;
+		padding: 0;
 	}
 
 	#container {

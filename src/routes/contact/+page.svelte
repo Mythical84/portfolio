@@ -18,6 +18,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		--border-color: #a6da95;
+		--track-color: #24273a;
 	}
 
 	@property --red-percentage {
@@ -35,7 +37,10 @@
 	#border {
 		width: 100%;
 		height: 100%;
-		border-image: conic-gradient(lightgreen var(--red-percentage), #454545 var(--red-percentage), #454545 var(--red-percentage-2), lightgreen var(--red-percentage-2)) 1;
+		border-image: conic-gradient(var(--border-color) var(--red-percentage),
+			var(--track-color) var(--red-percentage), 
+			var(--track-color) var(--red-percentage-2), 
+			var(--border-color) var(--red-percentage-2)) 1;
 		border-radius: 5px;
 		border-width: 4px;
 		border-style: solid;
