@@ -6,7 +6,7 @@
 	let { cards, clicked_index, left, top, close } = $props();
 
 	// this token only has read perms don't worry
-	let token = "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";
+	let token = "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";
 
 	// get readme markdown and return as html that sveltekit can render
 	async function get_readme() {
@@ -38,7 +38,6 @@
 	}
 </style>
 		`;
-		console.log(html);
 		return style + "\n" + html;
 	}
 
@@ -106,7 +105,7 @@
 		<div id="selected_card" style="left: {left}px; top: calc({top}px - 22vh - 12px);">
 			<p id="title">{cards[clicked_index]?.getName()}</p>
 			{#if data[0] == ""}
-				<div id="markdown"><h2>Sorry, but I haven't written a markdown file for this repo yet</h2></div>
+				<div id="markdown"><h2>Sorry, but I haven't written a markdown file for this repo yet :(</h2></div>
 			{:else}
 				<div id="markdown">{@html data[0]}</div>
 			{/if}
@@ -122,11 +121,12 @@
 					{/each}
 				</div>
 				<div id='release'>
-					<div id="release-title">Releases</div>
 					<div id="file-container">
 						{#await get_file()}
 							<div id="placeholder"></div>
 						{:then releases}
+							<!--TODO: make this go away if there are no releases-->
+							<div id="release-title">Releases</div>
 							<ul>
 							{#each releases as release}
 								<li><a href={`https://github.com/Mythical84/${cards[clicked_index]?.getName()}/releases/tag/${release.name}`}>{release.name}</a></li>

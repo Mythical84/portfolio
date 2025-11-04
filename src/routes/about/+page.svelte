@@ -26,7 +26,7 @@
 			}
 		`;
 
-		let token = "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";
+		let token = "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";
 		let headers = new Headers();
 		headers.append("Authorization", "Bearer " + token);
 		headers.append("X-GitHub-Api-Version", "2022-11-28");
@@ -56,7 +56,7 @@
 		}
 
 		lang_freq = Object.fromEntries(Object.entries(lang_freq).sort(([,a],[,b]) => b-a));
-		lang_freq = Object.fromEntries(Object.entries(lang_freq).slice(0, 6));
+		lang_freq = Object.fromEntries(Object.entries(lang_freq).slice(0, 7));
 
 		let str = "";
 		let current_percent = 0;
@@ -75,7 +75,7 @@
 	}
 
 	// calculate the number of years since I was born with 9 decimal places of precision 
-	//TODO: this can probably be unified with the header calculations and put in a store
+	// this can probably be unified with the header calculations and put in a store
 	const birth = new Date("May 12, 2007");
 	const milli_year = 31556952000;
 	let years = $state("0")

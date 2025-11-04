@@ -4,7 +4,7 @@
 
 	let clicked_index = $state(-1);
 	// this token only has read perms don't worry
-	let token = "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";
+	let token = "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";
 	// top and left position of the card that the user clicked
 	let top = $state(0);
 	let left = $state(0);
