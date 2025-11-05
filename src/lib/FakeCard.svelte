@@ -2,11 +2,12 @@
 	import { Base64 } from "js-base64";
 	import { compile } from "mdsvex";
 	import colors from "./colors.json"
+	import { PUBLIC_API_KEY } from "$env/static/public";
 
 	let { cards, clicked_index, left, top, close } = $props();
 
 	// this token only has read perms don't worry
-	let token = "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";
+	let token = PUBLIC_API_KEY;
 
 	// get readme markdown and return as html that sveltekit can render
 	async function get_readme() {

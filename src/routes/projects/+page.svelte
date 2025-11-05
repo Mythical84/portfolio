@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Card from "$lib/Card.svelte";
 	import FakeCard from "$lib/FakeCard.svelte";
+	import { PUBLIC_API_KEY } from "$env/static/public";
 
 	let clicked_index = $state(-1);
 	// this token only has read perms don't worry
-	let token = "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";
+	let token = PUBLIC_API_KEY;
 	// top and left position of the card that the user clicked
 	let top = $state(0);
 	let left = $state(0);

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { gql, request } from "graphql-request";
 	import colors from "$lib/colors.json";
-	import python from "$lib/python.png";
+	import { PUBLIC_API_KEY } from "$env/static/public";
 
 	// TODO: replace this with requests to the rest api, the graphql api is super slow 
 	// honestly I should just make a single rest request to get all of the repos on page load and store the results
@@ -26,7 +26,7 @@
 			}
 		`;
 
-		let token = "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";
+		let token = PUBLIC_API_KEY;
 		let headers = new Headers();
 		headers.append("Authorization", "Bearer " + token);
 		headers.append("X-GitHub-Api-Version", "2022-11-28");
