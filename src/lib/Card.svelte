@@ -34,6 +34,7 @@
 		align-items: center;
 		justify-content: center;
 		border: 4px solid #6e738d;
+		overflow: hidden;
 	}
 
 	button {

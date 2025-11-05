@@ -197,7 +197,8 @@
 		background: #181926;
 		border: 4px solid #6e738d;
 		color: #cad3f5;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 
 	#title {

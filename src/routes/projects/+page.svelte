@@ -87,7 +87,8 @@
 		border-width: 4px;
 		border-style: solid;
 		animation: border-animation ease-in-out .5s forwards;
-		overflow: scroll;
+		overflow-y: scroll;
+		overflow-x: hidden;
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		justify-items: center;
