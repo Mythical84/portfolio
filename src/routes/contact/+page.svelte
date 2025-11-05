@@ -7,7 +7,7 @@
 			<h3>I don't have a whole lot to put here</h3>
 			<div id="links">
 				<ul>
-					<li><a href="mailto:tyler.artinger@gmail.com">Send me an email</a></li>
+					<li><a href="mailto:tyler@mythical83.com">Send me an email</a></li>
 					<li><a href="www.linkedin.com/in/tyler-artinger-139556397">reach me at linkedin</a></li>
 					<li>Or fill out the form below</li>
 				</ul>
